@@ -10,18 +10,18 @@ public class Hufflepuff extends Hogwarts {
         this.patience = patience;
     }
 
-    public int totalPoints(){
+    public int totalPoints() {
         return hardWork + loyalty + patience;
     }
 
-    public boolean compare(Hufflepuff hufflepuff){
+    public boolean compare(Hufflepuff hufflepuff) {
         return this.totalPoints() > hufflepuff.totalPoints();
     }
-    public void printCompare(Hufflepuff hufflepuff){
-        if(this.compare(hufflepuff)){
+
+    public void printCompare(Hufflepuff hufflepuff) {
+        if (this.compare(hufflepuff)) {
             System.out.println(this.name + "лучший пуффендуец, чем " + hufflepuff.name);
-        }
-        else {
+        } else {
             System.out.println(hufflepuff.name + " лучший пуффендуец, чем " + this.name);
         }
     }
@@ -30,5 +30,4 @@ public class Hufflepuff extends Hogwarts {
     public String toString() {
         return "Имя: " + name + "\n Сила магии: " + magicPower + "\n Расстояние трансгрессии: " + transgressionPower + "\n верность: " + loyalty + "\n трудолюбие: " + hardWork + "\n честность: " + patience;
     }
-
 }

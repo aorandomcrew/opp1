@@ -1,4 +1,4 @@
-public class Gryffindor extends Hogwarts{
+public class Gryffindor extends Hogwarts {
     private final int nobleness;
     private final int honor;
     private final int bravery;
@@ -9,25 +9,25 @@ public class Gryffindor extends Hogwarts{
         this.honor = honor;
         this.bravery = bravery;
     }
-    public int totalPoints(){
+
+    public int totalPoints() {
         return nobleness + honor + bravery;
     }
 
-    public boolean compare(Gryffindor gryffindor){
+    public boolean compare(Gryffindor gryffindor) {
         return this.totalPoints() > gryffindor.totalPoints();
     }
-    public void printCompare(Gryffindor gryffindor){
-        if(this.compare(gryffindor)){
+
+    public void printCompare(Gryffindor gryffindor) {
+        if (this.compare(gryffindor)) {
             System.out.println(this.name + " лучший грифиндорец, чем " + gryffindor.name);
-        }
-        else {
+        } else {
             System.out.println(gryffindor.name + " лучший грифиндорец, чем " + this.name);
         }
     }
+
     @Override
     public String toString() {
-        return "Имя: " + name + "\n Сила магии: " + magicPower + "\n Расстояние трансгрессии: " + transgressionPower + "\n благородство: " +nobleness + "\n честь: " + honor +"\n храбрость: " + bravery;
+        return "Имя: " + name + "\n Сила магии: " + magicPower + "\n Расстояние трансгрессии: " + transgressionPower + "\n благородство: " + nobleness + "\n честь: " + honor + "\n храбрость: " + bravery;
     }
-
-
 }

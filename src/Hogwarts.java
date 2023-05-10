@@ -8,18 +8,19 @@ public abstract class Hogwarts {
         this.magicPower = magicPower;
         this.transgressionPower = transgressionPower;
     }
-    public int totalPoints(){
+
+    public int totalPoints() {
         return magicPower + transgressionPower;
     }
 
-    public boolean compare(Hogwarts hogwarts){
+    public boolean compare(Hogwarts hogwarts) {
         return this.totalPoints() > hogwarts.totalPoints();
     }
-    public void printCompare(Hogwarts hogwarts){
-        if(this.compare(hogwarts)){
+
+    public void printCompare(Hogwarts hogwarts) {
+        if (this.compare(hogwarts)) {
             System.out.println(this.name + "лучший студент, чем " + hogwarts.name);
-        }
-        else {
+        } else {
             System.out.println(hogwarts.name + " лучший студент, чем " + this.name);
         }
     }

@@ -12,21 +12,22 @@ public class Ravenclaw extends Hogwarts {
         this.creativity = creativity;
     }
 
-    public int totalPoints(){
+    public int totalPoints() {
         return intelligence + wisdom + creativity;
     }
 
-    public boolean compare(Ravenclaw ravenclaw){
+    public boolean compare(Ravenclaw ravenclaw) {
         return this.totalPoints() > ravenclaw.totalPoints();
     }
-    public void printCompare(Ravenclaw ravenclaw){
-        if(this.compare(ravenclaw)){
+
+    public void printCompare(Ravenclaw ravenclaw) {
+        if (this.compare(ravenclaw)) {
             System.out.println(this.name + "лучший когтевранец, чем " + ravenclaw.name);
-        }
-        else {
+        } else {
             System.out.println(ravenclaw.name + " лучший когтевранец, чем " + this.name);
         }
     }
+
     public String toString() {
         return "Имя: " + name + "\n Сила магии: " + magicPower + "\n Расстояние трансгрессии: " + transgressionPower + "\n Интеллект: " + intelligence + "\n Мудрость: " + wisdom + "\n остроумие: " + wit + "\n креативность: " + creativity;
     }
